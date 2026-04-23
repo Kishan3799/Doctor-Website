@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =====================
+   CSS CUSTOM PROPERTIES
+   ===================== */
+:root {
+  --color-primary: #3573B9;
+  --color-primary-dark: #0369A1;
+  --color-accent: #38BDF8;
+  --color-bg-light: #F0F9FF;
+  --color-text-primary: #1E293B;
+  --color-text-muted: #64748B;
+  --color-star: #FACC15;
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0px 10px 30px rgba(3, 105, 161, 0.12);
+  --radius-card: 16px;
+  --radius-input: 8px;
+  --radius-pill: 9999px;
+}
+
+/* =====================
+   BASE RESET
+   ===================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: auto; /* Lenis handles smooth scroll */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--color-text-primary);
+  background-color: #ffffff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* =====================
+   TYPOGRAPHY
+   ===================== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--color-text-primary);
+}
+
+/* =====================
+   GSAP ANIMATION STUBS
+   ===================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(50px);
+}
+
+.stagger-child {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+/* =====================
+   CUSTOM UTILITIES
+   ===================== */
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #3573B9, #38BDF8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-glass {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .section-padding {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .container-xl {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+/* =====================
+   SCROLLBAR STYLING
+   ===================== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #38BDF8;
+  border-radius: 10px;
+}
+
+/* =====================
+   FORM INPUTS
+   ===================== */
+input, select, textarea {
+  font-family: 'Inter', sans-serif;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+}
+
+/* =====================
+   SMOOTH PAGE TRANSITIONS
+   ===================== */
+.page-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
