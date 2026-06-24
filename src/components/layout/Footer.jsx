@@ -154,7 +154,7 @@ const Footer = () => {
       <div className="border-t border-gray-800">
         <div className="container-xl py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-gray-500 text-sm">
-            © {currentYear} BrightSmile Dental Care. All rights reserved.
+           BrightSmile Dental Care &copy; {currentYear} Designed by <a href="https://craftkoder.com" className="hover:text-accent transition-colors">CraftKoder</a>. All rights reserved.
           </p>
           <div className="flex gap-5">
             <a href="#" className="text-gray-500 text-sm hover:text-accent transition-colors">Privacy Policy</a>
